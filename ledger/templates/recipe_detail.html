@@ -3,6 +3,7 @@
 
 {% block content %}
 	<h2>{{ recipe.name }}</h2>
+	<h3>Author: {{ recipe.author }}</h3>
 	<ol>
 		{% for ingredient in recipe.ingredients.all %}
 			<li>{{ ingredient.ingredient.name }} : {{ ingredient.quantity }}</li>
