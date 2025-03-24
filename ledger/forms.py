@@ -4,10 +4,10 @@ from .models import RecipeImage
 
 
 class RecipeImageForm(forms.ModelForm):
-	class Meta:
-		model = RecipeImage
-		fields = [
-			'recipe_image',
-			'description',
-			'recipe'
-		]
+    class Meta:
+        model = RecipeImage
+        fields = [
+            'recipe_image',
+            'description',
+            'recipe'
+        ]

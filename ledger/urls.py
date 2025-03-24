@@ -1,7 +1,12 @@
 # ledger/urls.py
 
 from django.urls import path
-from .views import RecipeListView, RecipeDetailView, RecipeCreateView, ImageCreateView
+from .views import (
+    RecipeListView,
+    RecipeDetailView,
+    RecipeCreateView,
+    ImageCreateView,
+    )
 
 urlpatterns = [
     path('recipes/list/', RecipeListView.as_view(), name='recipe_list'),
