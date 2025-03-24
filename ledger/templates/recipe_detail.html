@@ -12,7 +12,9 @@
 	</ol>
 
 	{% for image in recipe.images.all %}
-		<h1>Image goes here</h1>
 		<img src="{{ image.recipe_image.url }} " alt='{{ image.description}}'>
 	{% endfor %}
+	<h3><a href="{% url 'ledger:image_create' pk=recipe.pk %}">Add an image here</a></h3>
+	<h3><a href="{% url 'ledger:recipe_list' %}">Go back to recipe list</a></h3>
+
 {% endblock %}

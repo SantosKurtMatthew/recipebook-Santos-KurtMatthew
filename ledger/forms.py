@@ -3,9 +3,11 @@ from django import forms
 from .models import RecipeImage
 
 
-class RecipeImageForm(forms.Form):
+class RecipeImageForm(forms.ModelForm):
 	class Meta:
 		model = RecipeImage
-		fields = '__all__'
-		widgets = {
-		}
+		fields = [
+			'recipe_image',
+			'description',
+			'recipe'
+		]

@@ -48,3 +48,6 @@ class RecipeImage(models.Model):
         on_delete=models.CASCADE,
         related_name='images'
     )
+
+    def get_absolute_url(self):
+        return reverse('ledger:recipe_detail', args=[self.recipe.pk])
